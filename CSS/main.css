@@ -297,7 +297,6 @@ nav li a:hover {
 
 @media only screen and (min-width: 1080px) {
   .container {
-    width: 1080px;
     margin: 0;
   }
   section {
@@ -380,7 +379,7 @@ nav li a:hover {
   }
 }
 
-@media only screen and (min-width: 1450px) {
+@media only screen and (min-width: 1440px) {
   .expirience-section:before {
     content: "";
     position: absolute;
