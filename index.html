@@ -28,13 +28,17 @@
           />
           <ul class="primary-nav">
             <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="#expirience-section-id">Expirence</a></li>
-            <li><a href="#projects-id">Projects</a></li>
+            <li id="expirience">
+              <a href="#expirience-section-id">Expirence</a>
+            </li>
+            <li id="project"><a href="#projects-id">Projects</a></li>
           </ul>
 
           <ul class="seconadry-nav">
-            <li><a href="#contact-id">Contact</a></li>
-            <li class="go-premium-cta"><a href="#">Go Premium</a></li>
+            <li id="contact"><a href="#contact-id">Contact</a></li>
+            <li class="go-premium-cta" id="premium">
+              <a href="#">Go Premium</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -158,6 +162,10 @@
     </section>
 
     <script>
+      let expirience = document.getElementById("expirience");
+      let project = document.getElementById("project");
+      let contact = document.getElementById("contact");
+      let premium = document.getElementById("premium");
       const mobileBtn = document.getElementById("mobile-cta");
       nav = document.querySelector("nav");
       mobileBtnExit = document.getElementById("mobile-exit");
@@ -166,6 +174,18 @@
       });
 
       mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+      });
+      expirience.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+      });
+      project.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+      });
+      contact.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+      });
+      premium.addEventListener("click", () => {
         nav.classList.remove("menu-btn");
       });
     </script>
