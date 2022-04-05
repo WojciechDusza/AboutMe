@@ -45,7 +45,13 @@ ul {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 7em 2em;
+}
+
+.section-anchor {
+  visibility: hidden;
+  position: relative;
+  bottom: 63px;
 }
 
 .hero {
@@ -98,7 +104,7 @@ section {
 
 ul.expirience-list {
   margin: 0;
-  padding-left: 0.1em;
+  padding-left: 7em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 
@@ -122,12 +128,30 @@ ul.expirience-list {
 }
 
 .expirience-section img {
-  display: none;
+  position: relative;
+  margin: 2em 2em -0.5em 2em;
+  border-radius: 0.5em;
 }
-
+// :target:before {
+//   content:"";
+//   display:block;
+//   height:90px; /* fixed header height*/
+//   margin:-90px 0 0; /* negative fixed header height */
+//   }
 .testimonials-section {
   background: var(--primary-color);
   color: white;
+
+ 
+
+  // .testimonials-section::before {
+  //   display: block; 
+  //   content: " "; 
+  //   margin-top: -400px; 
+  //   height: 400px; 
+  //   visibility: hidden; 
+  //   pointer-events: none;
+  // }
 
   li {
     background: #006bd6;
@@ -136,13 +160,25 @@ ul.expirience-list {
     width: 80%;
     margin: 0 auto 5em auto;
     border-radius: 1em;
-    img {
+    //zostawić jedno, wstawić swoje zdjęcie, napisać coś o sobie
+
+    &:last-of-type {
+      margin: 0 auto 0 auto;
+    }
+
+    .person-image {
       width: 5em;
       height: 5em;
       border: 5px solid #006bd6;
       border-radius: 50%;
       margin-top: -4.5em;
-    } //zostawić jedno, wstawić swoje zdjęcie, napisać coś o sobie
+      background-image: url('../images/mojezdj.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -164,6 +200,7 @@ textarea {
   border-radius: 0.3em;
   border: 1px solid gray;
   box-sizing: border-box;
+  resize: none;
 }
 
 input[type="submit"] {
@@ -182,7 +219,7 @@ input[type="submit"] {
 
 inframe {
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 
 nav.menu-btn {
@@ -266,6 +303,7 @@ nav {
     li.current a {
       font-weight: bold;
     }
+
     li.go-premium-cta a {
       color: var(--primary-color);
       border: 3px solid var(--primary-color);
@@ -354,16 +392,17 @@ nav {
       display: flex;
     }
   }
+  .contact-left {
+    padding: 40px;
+    width: 50%;
+  }
   .contact-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 45%;
-    height: 100%;
-
-    iframe {
-      height: 100%;
-    }
+    padding: 40px;
+    width: 50%;
+    height: 80%;
+  }
+  .form-el {
+    max-width: 600px;
   }
 }
 
